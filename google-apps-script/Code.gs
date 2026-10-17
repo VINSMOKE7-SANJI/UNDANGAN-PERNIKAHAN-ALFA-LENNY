@@ -156,7 +156,7 @@ function doPost(e) {
     return jsonResponse_({ ok: false, error: "invalid_payload" });
   }
 
-  if (!ALLOWED_TOKEN || ALLOWED_TOKEN === "AL-iPTlslnyVJcU0oLBNWd5CnpmMvJMdPTx") {
+  if (!ALLOWED_TOKEN) {
     return jsonResponse_({ ok: false, error: "token_not_configured" });
   }
   if (payload.token !== ALLOWED_TOKEN) {
